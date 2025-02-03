@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Варна, България</title>
+  <link rel="stylesheet" href="varnasite.css">
+  </head>
+  <body>
+    <header>
+      <h1>Варна, България</h1>
+    </header>
+        <div class="nav">
+      <div class="logo">Информация за Варна</div>
+      <ul class="menu">
+        <li><a href="#intro">Въведение</a></li>
+        <li><a href="#info">Информация</a></li>
+        <li><a href="#gallery">Галерия</a></li>
+        <li><a href="#video">Видео</a></li>
+        <li><a href="#reservation">Резервация</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div id="intro" class="intro">
+        <div>
+          <h2>Добре дошли във Варна</h2>
+          <p>Варна е третият по големина град в България и най-големият град и морски курорт на българското Черноморие. Намира се на Варненския залив, който е част от Черно море. Варна е основен културен, икономически и образователен център на Североизточна България.</p>
+        </div>
+        <img src="Varnasite/varnaCurkva.jpg" alt="Varna">
+      </div>
+      <div id="info" class="info">
+        <h3>Бърз поглед на Варна</h3>
+        <p class="highlight">Варна е най-големият град на българското Черноморие и основен културен, икономически и образователен център на Североизточна България.</p>
+        <p>Градът има население от около 400 000 души и е популярна дестинация за туристи от цял свят. Варна е дом на много културни и исторически забележителности, като Варненския археологически музей, Римските бани и Варненската катедрала. Градът е известен и с красивите си плажове, паркове и градини, както и с оживения нощен живот.</p>
+        <ul>
+          <li>Популация: 400,000 души</li>
+          <li>Площ: 240 квадратни километра</li>
+          <li>Основан: Основан през 6 век пр. н. е</li>
+          <li>Климат: Влажен субтропичен</li>
+        </ul>
+        <p>За повече информация посетете <a href="https://en.wikipedia.org/wiki/Varna" target="_blank">Wikipedia страницата</a> за Варна.</p>
+      </div>
+      <div id="gallery" class="gallery">
+        <img src="Varnasite/VarnaPlaj.jpg" alt="Varna Beach">
+        <img src="Varnasite/VarnaKatedrala.jpg" alt="Varna Cathedral">
+        <img src="Varnasite/RoyalHotelVarna.jpg" alt="Hotel Royal">
+        <img src="Varnasite/HotelPlazaVarna.jpg" alt="Hotel Plaza">
+      </div>
+            <div id="video" class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/swFt0Fh_Yz4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="caption">Варна, България</div>
+      </div>
+      <div id="reservation" class="reservation">
+        <div class="form">
+          <h4>Направете резервация в хотел "Ройал"</h4>
+          <form id="reservation-form">
+			<label for="first-name">Име:</label>
+			<input type="text" id="first-name" name="first-name" required>
+			<div class="validation-error" id="first-name-error"></div>
+			<br>
+			<label for="last-name">Фамилия:</label>
+			<input type="text" id="last-name" name="last-name" required>
+			<div class="validation-error" id="last-name-error"></div>
+			<br>
+			<label for="phone">Телефонен номер:</label>
+			<input type="text" id="phone" name="phone" pattern="^0\d{9}$" required>
+			<div class="validation-error" id="phone-error"></div>
+			<br>
+			<label for="email">Имейл:</label>
+			<input type="email" id="email" name="email" required>
+			<div class="validation-error" id="email-error"></div>		
+			<br>
+			<label for="room-type">Вид на стаята:</label>
+			<select id="room-type" name="room-type">
+				<option value="single">Единична</option>
+				<option value="double">Двойна</option>
+				<option value="suite">Апартамент</option>
+			</select>
+			<br>
+			<label for="num-guests">Брой гости:</label>
+			<input type="number" id="num-guests" name="num-guests" min="1" max="4">
+			<br>
+			<label for="num-nights">Брой нощувки:</label>
+			<input type="number" id="num-nights" name="num-nights" min="1">
+			<br>
+			<label for="price-output">Обща цена:</label>
+			<span id="price-output"></span>
+			<br>
+			<input type="submit" value="Резервирай">
+		  </form>
+        </div>
+        <div class="hotel-image">
+          <img src="VarnaSite/VarnaRoyal2.jpg" alt="Hotel Image">
+        </div>
+      </div>
+    </div>
+    <script src="./varnasite.js"></script>
+  </body>
+</html>

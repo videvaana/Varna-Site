@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;700&display=swap');
+
+body {
+    font-family: 'Jura', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fce8f7;
+}
+
+header {
+    font-family: 'Rampart One', sans-serif;
+    background-color: #d915a8;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d915a8;
+    color: white;
+    padding: 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: #ddd;
+}
+
+.nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav .menu li {
+    margin: 0 10px;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d915a82a;
+    padding: 20px;
+}
+
+.intro h2 {
+    margin: 0;
+    font-size: 36px;
+    font-family: 'Jura', sans-serif;
+}
+
+.intro p {
+    margin: 20px;
+    font-size: 20px;
+}
+
+.intro img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.info {
+    background-color: #e1d8df42;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.info h3 {
+    margin: 0;
+    font-size: 36px;
+    font-family: 'Jura', sans-serif;
+    color: #333;
+}
+
+.info p {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.info p.highlight {
+    font-weight: bold;
+    color: #555;
+}
+
+.info ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.info ul li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.info a {
+    color: #333;
+    text-decoration: none;
+}
+
+.info a:hover {
+    color: #666;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.gallery img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.video {
+    position: relative;
+    width: 800px;
+    height: 450px;
+    margin: 20px 0;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.reservation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.reservation .form {
+    width: 60%;
+}
+
+.reservation .form h4 {
+    margin: 0;
+    font-size: 24px;
+    font-family: 'Verdana', sans-serif;
+    color: #333;
+}
+
+.reservation .form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation .form form label {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.reservation .form form input,
+.reservation .form form select {
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.reservation .form form input[type='submit'] {
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reservation .form form input[type='submit']:hover {
+    background-color: #555;
+}
+
+.reservation .form form .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.reservation .hotel-image {
+    width: 35%;
+}
+
+.reservation .hotel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.payment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.payment .form {
+    width: 60%;
+}
+
+.payment .form h4 {
+    margin: 0;
+    font-size: 24px;
+    font-family: 'Verdana', sans-serif;
+    color: #333;
+}
+
+.payment .form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment .form form label {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.payment .form form input {
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payment .form form input[type='submit'] {
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.payment .form form input[type='submit']:hover {
+    background-color: #555;
+}
+
+.payment .form form .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.payment .card-image {
+    width: 35%;
+}
+
+.payment .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}

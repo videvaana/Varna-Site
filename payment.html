@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Page</title>
+  <style>
+    form {
+      width: 400px;
+      margin: 0 auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5em;
+    }
+    input[type="text"],
+    input[type="month"] {
+      width: 100%;
+      padding: 0.5em;
+      font-size: 1em;
+      margin-bottom: 1em;
+    }
+    button[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 0.5em 1em;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <label for="card-number">Номер на картата:</label>
+    <input type="text" id="card-number" maxlength="16" pattern="[0-9]*">
+    <div id="card-number-error" style="display: none; color: red;"></div>
+    
+    <label for="card-expiration">Валидна до:</label>
+    <input type="month" id="card-expiration">
+    <div id="card-expiration-error" style="display: none; color: red;"></div>
+    
+    <button type="submit">Плати</button>
+  </form>
+  <script>
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      const cardNumber = document.querySelector("#card-number");
+      const cardNumberError = document.querySelector("#card-number-error");
+      if (!/^\d{16}$/.test(cardNumber.value)) {
+        cardNumberError.textContent = "Номера на картата трябва да бъде 16 цифри.";
+        cardNumberError.style.display = "block";
+        return;
+      } else {
+        cardNumberError.style.display = "none";
+      }
+      
+      const cardExpiration = document.querySelector("#card-expiration");
+      const cardExpirationError = document.querySelector("#card-expiration-error");
+      const expiration = new Date(cardExpiration.value);
+      if (expiration <= new Date()) {
+        cardExpirationError.textContent = "Датата на изтичане трябва да бъде в бъдещето.";
+        cardExpirationError.style.display = "block";
+        return;
+      } else {
+        cardExpirationError.style.display = "none";
+      }
+  
+	  alert("Плащането беше успешно!")
+	  window.location.href="varnasite.html"
+    });
+  </script>
+</body>
+</html>
